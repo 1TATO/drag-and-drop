@@ -1,0 +1,27 @@
+html {
+  font-family: 'Nunito';
+}
+
+body {
+  background-color: #021d24;
+  color: #ffffff;
+}
+
+.boards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.board {
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  width: 300px;
+  height: 100px;
+
+}
+
+h3 {
+  margin: 10px 10px;
+  font-weight: 900;
+}
+
