@@ -1,10 +1,71 @@
-html {
+* {
+  box-sizing: border-box;
   font-family: 'Nunito';
 }
 
 body {
   background-color: #021d24;
   color: #ffffff;
+
+  transition: background 0.2s linear;
+}
+
+.toggle-theme {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+
+  margin: 20px 39px 0;
+}
+
+.toggle-theme .checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.toggle-theme .label {
+  background-color: #111;
+  width: 50px;
+  height: 26px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 5px;
+
+  position: relative;
+
+  border-radius: 50px;
+
+  transform: scale(1.2);
+}
+
+.toggle-theme .label .fa-moon-o {
+  color: #f1c40f;
+}
+
+.toggle-theme .label .fa-sun-o {
+  color: #f39c12;
+}
+
+.toggle-theme .label .ball {
+  width: 22px;
+  height: 22px;
+  background-color: #fff;
+
+  position: absolute;
+
+  top: 2px;
+  left: 2px;
+
+  border-radius: 50%;
+
+  transition: transform 0.2s linear;
+}
+
+.toggle-theme .checkbox:checked + .label .ball {
+  transform: translateX(24px);
 }
 
 .boards {
@@ -12,53 +73,64 @@ body {
   margin: 20px;
 }
 
-.board {
+.boards .board {
   background: #021d3b;
+
   border: 1px solid #ffffff11;
   border-radius: 5px;
+
   margin: 0 16px;
 }
 
-.board h3 {
+.boards .board h3 {
   padding: 16px;
   margin: 0;
+
   color: #f37c2c;
 }
 
-.dropzone {
+.boards .board .dropzone {
   padding: 16px;
+
   min-width: 284px;
   min-height: 200px;
 }
 
-.card {
+.boards .board .dropzone .card {
   padding: 20px;
-  box-shadow: 0 2px 2px -1px #f37c2c;
-  width: 250px;
   margin: 25px 0;
+
+  box-shadow: 0 2px 2px -1px #f37c2c;
+
+  width: 250px;
+  
   border-radius: 5pz;
+
   font-weight: 600;
   font-size: 18px;
-  background-color: rgba(255, 255, 255, 0.082);
+  background-color: #ffffff15;
 }
 
-.status {
+.boards .board .dropzone .status {
   width: 30px;
   height: 8px;
-  background: gray;
+
+  /* background: gray; */
+
   border-radius: 5px;
+  
   margin-bottom: 10px;
 }
 
-.status.green {
+.boards .board .dropzone .status.green {
   background: #31ff64;
 }
 
-.status.yellow {
+.boards .board .dropzone .status.yellow {
   background: #fff06c;
 }
 
-.status.red {
+.boards .board .dropzone .status.red {
   background: red;
 }
 
@@ -76,5 +148,26 @@ body {
 }
 
 .over {
+  background-color: #4cd13733;
+}
+
+body.light {
+  background-color: #bdbdbde5;
+}
+
+body.light .boards .board {
+  background-color: #d8dde2;
+}
+
+body.light .boards .board .card {
+  color: #111;
+  background-color: #f37c2c18;
+}
+
+body.light .highlight {
+  background-color: #032f611a;
+}
+
+body.light .over {
   background-color: #4cd13733;
 }
