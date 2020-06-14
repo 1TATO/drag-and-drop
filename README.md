@@ -7,4 +7,4 @@ The project idea is from Rocketseat's youtube: https://www.youtube.com/watch?v=6
 
 - [ ] Add a new task
 - [ ] Add a new board
-- [ ] Switch theme
+- [X] Switch theme
