@@ -13,9 +13,7 @@ function dragstart() {
   this.classList.add('is-dragging')
 };
 
-function drag() {
-
-};
+function drag() {};
 
 function dragend() {
   dropzones.forEach(dropzone => dropzone.classList.remove('highlight'))
@@ -30,9 +28,7 @@ dropzones.forEach(dropzone => {
   dropzone.addEventListener('drop', drop)
 });
 
-function dragenter() {
-  
-};
+function dragenter() {};
 
 function dragover() {
   this.classList.add('over')
@@ -46,6 +42,12 @@ function dragleave() {
   this.classList.remove('over')
 };
 
-function drop() {
-  
+function drop() {};
+
+const checkbox = document.getElementById('checkbox')
+
+checkbox.addEventListener('change', toggle)
+
+function toggle() {
+  document.body.classList.toggle('light');
 };
